@@ -27,6 +27,8 @@ sys	0m0.004s
 
 # )))
 
+-- PROMEDIO --
+
 real 0.01633333
 user 0.01133333
 sys	 0.005333333
@@ -63,6 +65,8 @@ sys	0m0.103s
 
 # )))
 
+-- PROMEDIO --
+
 real 1.1695
 user 1.432833
 sys	 0.1073333
@@ -94,6 +98,8 @@ user	0m0.841s
 sys	0m0.189s
 
 # )))
+
+-- PROMEDIO --
 
 real 0.6645
 user 0.8045
@@ -127,6 +133,8 @@ sys	0m0.042s
 
 # )))
 
+-- PROMEDIO --
+
 real 0.2538333
 user 0.2218333
 sys	 0.0315
@@ -158,6 +166,8 @@ user	0m2.930s
 sys	0m0.154s
 
 # )))
+
+-- PROMEDIO --
 
 real 2.825333
 user 2.949833

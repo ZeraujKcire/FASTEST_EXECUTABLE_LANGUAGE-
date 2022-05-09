@@ -4,15 +4,13 @@
 
 \portada
 
-% TODO: REESCRIBIR.
-
 \section{INTRODUCCIÓN.} % (((
 
 \subsection{--- Motivación ---} % (((
 \label{sub:motivacion}
 El desarrollo de programas computacionales (y la construcción de nuevos lenguajes de programación) ha ofrecido poderosas herramientas y técnicas para la extensión de las profesiones mejorando su productividad.
 Con algunas tareas, para continuar con un ascenso en la eficiencia, se requieren crear y desarrollar tecnologías cuyo objetivo principal sea el de producir programas cada vez más rápidos.
-Sin embargo, la gran cantidad de lenguajes existentes (cada uno con diferentes implementaciones y funciones únicas) puede hacer que se desvíe la tarea por escribir el programa más eficiente en términos de recursos algoritmicos, y sea reemplazada por la búsqueda de paqueterías y lenguajes que integren las funciones deseadas, y los problemas resueltos.
+Sin embargo, la gran cantidad de lenguajes existentes (cada uno con diferentes implementaciones y funciones únicas) puede hacer que se desvíe la tarea por escribir el programa más eficiente en términos de recursos algorítmicos, y sea reemplazada por la búsqueda de paqueterías y lenguajes que integren las funciones deseadas, y los problemas resueltos.
 El enfoque inverso también representa una problemática: si el lenguaje en el que se programa para resolver una determinada tarea es ineficiente en términos de recursos computacionales para la implementación del algoritmo escrito, es conveniente migrar a otro lenguaje que realice tal proceso en una cantidad de tiempo menor.
 
 Estos dos problemas son de interés para dos sectores.
@@ -53,8 +51,11 @@ Para ello, se someterá a todos los programas escritos en los \(4\) lenguajes a 
 
 Se tiene conocimiento del estudio comparativo realizado en \micita{comparacion_lenguajes}, cuyo objetivo es el de observar la cantidad de energía gastada por cada lenguaje.
 En tal análisis se realiza la recolección de \(10\) problemas de programación bien conocidos, escritos en \(27\) lenguajes de programación.
-No obstante, examinando el código en \micita{github_rosseta}, se observa que se seleccionaron distintos algoritmos con diferentes órdenes de complejidad para resolver la misma tarea en algunos lengujes, tales como en la obtención del \(n-\)ésimo número de Fibonacci en \texttt{C}, y \texttt{Python}.
-El presente trabajo pretende exponer ejemplos más sencillos, pero estandarizados para evaluar a los lenguajes de programación expuestos.
+No obstante, examinando el código en \micita{github_rosseta}, se observa que se seleccionaron distintos algoritmos con diferentes órdenes de complejidad para resolver la misma tarea en algunos lenguajes, tales como en la obtención del \(n-\)ésimo número de Fibonacci en \texttt{C}, y \texttt{Python}. \\[2mm]
+
+El presente trabajo pretende exponer ejemplos más sencillos, pero estandarizados, para evaluar a los lenguajes de programación mencionados.
+Y para que el presente análisis pueda ser fácilmente replicado por cualquier persona del segundo sector que requiera apreciar diferencias significativas en los tiempos de ejecución.
+Se establece la licencia de software GPLv3 en todos los archivos de este documento y análisis en \micita{repo} con éste propósito.
 % )))
 
 \subsection{--- Diseño de Experimentos ---} % (((
@@ -144,8 +145,7 @@ Se le llama \(H_0\) a la \textit{hipótesis nula}, y \(H_a\), \textit{hipótesis
 			\end{array}
 			\label{eq:hipotesis_principal}
 		\end{equation}
-		La cual, es probada con el estimador \(F_{trat} = CM_{trat} / CM_E\) de la tabla ANOVA de la sección.
-% TODO: COLOCAR SECCIÓN LINEA 139.
+		La cual, es probada con el estimador \(F_{trat} = CM_{trat} / CM_E\) de la tabla ANOVA de la sección \ref{sub:anova}.
 		Y \(H_0\) significa que no hay diferencia entre tratamientos.
 	\item[\fbox{Hip. Secundaria 1}]
 		\begin{equation}
@@ -200,7 +200,7 @@ Se tiene el siguiente planteamiento dadas las características del experimento.
 		\begin{enumerate}
 			\item Tarea asignada a resolver, es decir, el algoritmo programado.
 			\item La cantidad de procesos en segundo plano que realiza el equipo de cómputo de pruebas para funcionar.
-			\item El equipo de cómputo en dónde se ejcutan los programas. \vspace{-3mm}
+			\item El equipo de cómputo en dónde se ejecutan los programas. \vspace{-3mm}
 				\begin{multicols}{3}
 				\begin{enumerate}
 					\item Procesador.
@@ -214,17 +214,16 @@ Se tiene el siguiente planteamiento dadas las características del experimento.
 			\item Emulador de terminal (aplicación) que despliega y ejecuta las pruebas.
 		\end{enumerate}
 \end{enumerate}
-De entre los factores de ruido mencionados anteriormente, se dispondrá del control en el expeirmento de los factores 5.(a) y 5.(b), dado que son usualmente los que los usuarios del segundo sector demográfico de la sección \ref{sub:motivacion} puede controlar.
+De entre los factores de ruido mencionados anteriormente, se dispondrá del control en el experimento de los factores 5.(a) y 5.(b), dado que son usualmente los que los usuarios del segundo sector demográfico de la sección \ref{sub:motivacion} puede controlar.
 Así, se tiene un Diseño Cuadro Latino.
 \begin{enumerate}
 	\setcounter{enumi}{5}
 \item \textit{Niveles de Bloque 1 (algoritmo):}
-% TODO: ESCRIBBIR LOS NIVELES DE COMPLEJIDAD DE LOS ALGORITMOS y escribir su justificaicón en la línea 217.
 	\begin{enumerate}
-		\item Obtención del \(n-\)ésimo número de Fibonacci.
-		\item Máximo Común Divisor de dos números dados.
-		\item Aproximación del cálculo de \(\pi\).
-		\item Ordenación burbuja.
+		\item Obtención del \(n-\)ésimo número de Fibonacci. Que es de Orden \(O(n)\).
+		\item Máximo Común Divisor de dos números dados. Cuyo Orden de complejidad es de \(O(n \log n)\).
+		\item Aproximación del cálculo de \(\pi\). Su Orden de complejidad es de \(O(n2^n)\).
+		\item Ordenación burbuja. El orden de complejidad es de \(O(n^2)\).
 	\end{enumerate}
 		La justificación del orden de complejidad de éstos niveles se presenta en la sección \ref{sub:algoritmos}.
 	\item \textit{Niveles de Bloque 2 (Procesos en segundo plano):}\\[2mm]
@@ -292,7 +291,7 @@ Y se tiene la siguiente tabla del orden de factores bloque.
 	\label{subs:software}
 	\ttfamily
 	\fbox{Sistema Operativo} (GNU/Linux) Ubuntu 20.04.4 LTS.\\[2mm]
-	\fbox{Arquitectura} 64bits.\\[2mm]
+	\fbox{Arquitectura} x86-64 (i.e., 64bits).\\[2mm]
 	\fbox{Kernel} 5.13.0-40-generic.\\[2mm]
 	\fbox{Shell} Bash 5.0.17.\\[2mm]
 	\fbox{Emulador de Terminal} Kitty 0.22.2.\\[2mm]
@@ -317,7 +316,7 @@ Para el registro de tiempos de ejecución, se hará uso del comando \codigo{time
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width= 0.4 \linewidth]{IMAGENES/3/time.png}
-	\caption{Captura de pantalla desde la línea de comandos para ver la version del comando \codigo{time}.}
+	\caption{Captura de pantalla desde la línea de comandos para ver la versión del comando \codigo{time}.}
 	\label{fig:time}
 \end{figure}\\
 En cada proceso ejecutado por el sistema operativo, hay 3 eventos importantes del procesador que pueden medirse (en el tiempo) con el programa \codigo{time}.
@@ -331,7 +330,7 @@ En cada proceso ejecutado por el sistema operativo, hay 3 eventos importantes de
 		En este modo, se puede realizar cualquier instrucción que la arquitectura del sistema operativo permita. Sin embargo, no siempre es necesario acceder a éste modo.
 \end{enumerate}
 Consulte \micita{explicacion_time} y \micita{wiki_modos}. \\[2mm]
-Se centrará la atención del expeirmento únicamente para medir el tiempo Real, es decir, el que experimentará el usuario final con su programa, debido a que se desea medir el impacto del lenguaje de programación en el segundo sector demográfico descrito en la sección \ref{sub:motivacion}.
+Se centrará la atención del experimento únicamente para medir el tiempo Real, es decir, el que experimentará el usuario final con su programa, debido a que se desea medir el impacto del lenguaje de programación en el segundo sector demográfico descrito en la sección \ref{sub:motivacion}.
 \newpage
 Se despliega un ejemplo del comando en a Figura \ref{fig:incert}, para observar que la incertidumbre de medición es de \(\pm 0.5\) milisegundos.
 \begin{figure}[hbt!]
@@ -349,9 +348,7 @@ Se despliega un ejemplo del comando en a Figura \ref{fig:incert}, para observar 
 Como se indicó en la sección \ref{subs:definicion_de}, se requiere tener una elección aleatoria sobre el orden de las corridas experimentales.
 Dado que, sólo se tendrá un factor controlable por cada una de las configuraciones de los bloques, entonces se asignarán los factores controlables aleatoriamente a cada celda de la matriz de la tabla de Diseño Cuadro Latino. \\[2mm]
 
-Se hace uso del programa escrito en \micita{rosseta_rls} (adaptado en el archivo \codigo{GENERACION\textunderscore DISENO.c}, en % referencia github
-% TODO: REFERENCIA A REPOSITORIO.
-), y se ejecuta con la siguiente instrucción de \codigo{Bash}.
+Se hace uso del programa escrito en \micita{rosseta_rls} (adaptado en el archivo \codigo{ANALISIS\textunderscore ESTADISTICO/}\\\codigo{1\textunderscore ALEATORIZACION/GENERACION\textunderscore DISENO.c}, en \micita{repo}), y se ejecuta con la siguiente instrucción de \codigo{Bash}.
 \begin{lstlisting}
 g++ GENERACION_DISENO.c -o ./compilacion && ./compilacion > output.txt
 \end{lstlisting}
@@ -362,20 +359,19 @@ Y se tiene el siguiente resultado
 [Python, C, Ruby, R]
 [C, R, Python, Ruby]
 \end{lstlisting}
-Así, se escribe el diseño en la Tabla \ref{tab:diseño_dcl_exp}, y se coloca en la base de datos del repositorio
-% TODO: ESCRIBIR REFERENCIA A REPOSITORIO.
+Así, se escribe el diseño en la Tabla \ref{tab:diseño_dcl_exp}, y se coloca en la base de datos en el archivo \codigo{ANALISIS\textunderscore ESTADISTICO/}\\\codigo{2\textunderscore DCL/dcl\textunderscore 2.txt} del repositorio \micita{repo}.
 \begin{table}[hbt!]
 	\centering
 	\footnotesize 
 	\begin{tabular}{|r|*{4}{c|}}
 		\hline 
-		& Fibinacci &	MCD &	Cálculo de \(\pi\) & Bubble Sort \\ \hline
+		& Fibonacci &	MCD &	Cálculo de \(\pi\) & Bubble Sort \\ \hline
 		Sin procesos & Ruby &  Python &  R &  C\\
 		Editor de Texto & R &  Ruby &  C &  Python\\
 		Navegador en Pág. Web & Python &  C &  Ruby &  R\\
 		Navegador en Video Web & C &  R &  Python &  Ruby \\ \hline
 	\end{tabular}
-	\caption{Aleatorizaión del diseño.} 
+	\caption{Aleatorización del diseño.} 
 	\label{tab:experimento_completo}
 \end{table}\\
 Se tiene un DCL no--estándar.
@@ -383,7 +379,7 @@ Se tiene un DCL no--estándar.
 
 \section{NIVELES DE FACTOR CONTROLABLE.} % (((
 \label{sec:niveles_fact_control}
-Se escriben las versiones a ejecutar de los lenguajes de programación del DCL de la sección \ref{sec:adaptacion_exp}.
+Éstas, fueron las versiones de los compiladores, en que se ejecutaron los distintos lenguajes de programación.
 \begin{enumerate}[noitemsep]
 	\item[\fbox{\texttt{C}}] El programa en el sistema operativo es \codigo{g++ 9.4.0}.
 	\item[\fbox{\texttt{Python}}] \codigo{Python 3.8.10}.
@@ -397,15 +393,13 @@ Se escriben las versiones a ejecutar de los lenguajes de programación del DCL d
 
 \subsection{--- Algoritmos Seleccionados para Test de Rapidez ---} % (((
 \label{sub:algoritmos}
-% TODO: PONER REPOSITORIO.
-Se esbozan los \(4\) algoritmos utilizados en el diseño experimental, cuyos archivos están licenciados con GPLv3, y pueden encontrarse en el repositorio % link
+Se esbozan los \(4\) algoritmos utilizados en el diseño experimental, cuyos archivos están licenciados con GPLv3, y pueden encontrarse en el repositorio \micita{repo}, en la carpeta \codigo{PROGRAMAS/}.
 Estos algoritmos fueron escritos en cada lenguaje usando su documentación básica. 
  
 \subsubsection{Números de Fibonacci.} % (((
 \label{subs:fibo}
 \fbox{
 	\ttfamily
-% \begin{minipage}{0.45\linewidth}
 	\begin{algorithm}[H]
 		\SetAlgoLined
 		\SetKwProg{Fn}{Funcion}{ is}{end}
@@ -420,10 +414,9 @@ Estos algoritmos fueron escritos en cada lenguaje usando su documentación bási
 		}
 		Imprimir Fibonacci(46)\;
 	\end{algorithm}
-% \end{minipage}
 }
-Este algoritmo es de orden \(O(n)\), donde \(n\) es el número requerido.
-% Está inspirado del repositorio de .
+Este algoritmo es de orden \(O(n)\), debido a la cantidad de ciclos requeridos de ejecución (\(n\)).
+Está inspirado en el repositorio \micita{github_rosseta}.
 % )))
 
 \subsubsection{Máximo Común Divisor.} % (((
@@ -446,7 +439,7 @@ Este algoritmo es de orden \(O(n)\), donde \(n\) es el número requerido.
 	\end{algorithm}
 }
 Este algoritmo es de orden \(O(n \log n)\), puesto que depende de lo largo que sea el número se efectuará el algoritmo de Euclides \codigo{mod} que es de complejidad \(O(\log n)\).
-% Está inspirado del repositorio de .
+Está inspirado en el repositorio \micita{github_rosseta}.
 % )))
 
 \subsubsection{Cálculo de Pi.} % (((
@@ -468,7 +461,7 @@ Este algoritmo es de orden \(O(n \log n)\), puesto que depende de lo largo que s
 	\end{algorithm}
 }
 Este algoritmo es de orden \(O(n 2^n)\), puesto que la función \codigo{sqrt()} es de orden \(O(2^n)\).
-% Está inspirado del repositorio de .
+Y consiste en la obtención de la integral de la función \(f(x) = \sqrt{1-x^2}\), por el método numérico de la Regla del Trapecio.
 % )))
 
 \subsubsection{Bubble Sort.} % (((
@@ -494,19 +487,19 @@ Este algoritmo es de orden \(O(n 2^n)\), puesto que la función \codigo{sqrt()} 
 		}
 	\end{algorithm}
 }
-Este algoritmo es de orden \(O(n^2)\), por los dos procesos \codigo{For}.
+Este algoritmo es de orden \(O(n^2)\), por los dos procesos \codigo{for}.
 La cadena inicial \codigo{a} tiene los \(1,000\) números naturales desordenados, y fue generada en python.
-Vease el código fuente en [] para la revisión de la cadena introducida.
-% Está inspirado del repositorio de .
+Véase el código fuente en \micita{repo}, para la revisión de la cadena introducida.
+Está inspirado en el repositorio \micita{github_rosseta}.
 % )))
 
 % )))
 
 \subsection{--- Procesos en Segundo Plano ---} % (((
 \label{sub:segundo_plano}
+Las siguientes capturas de pantalla, junto con el resto de detalles de los programas en ejecución, pueden consultarse en \micita{repo}, en la carpeta \codigo{DOCUMENTO/IMAGENES/6}. \vspace{-2mm}
 \begin{enumerate}
-	\item[\fbox{Sin procesos}] Se tiene sólo la ejecución del programa más los procesos necesarios para que el sistema operativo funcione (en la Figura \ref{fig:sin_procesos}), junto con la terminal donde se ejecutan los scripts de la sección \ref{sub:algoritmos}. Pueden consultarse los procesos activos detalladamente en []
-% TODO: referenciar repositorio github.
+	\item[\fbox{Sin procesos}] Se tiene sólo la ejecución del programa más los procesos necesarios para que el sistema operativo funcione (en la Figura \ref{fig:sin_procesos}), junto con la terminal donde se ejecutan los ``scripts'' de la sección \ref{sub:algoritmos}.
 		\begin{figure}[hbt!]
 			\centering
 			\includegraphics[width= 0.9 \linewidth]{IMAGENES/6/1_sin_procesos}
@@ -514,14 +507,14 @@ Vease el código fuente en [] para la revisión de la cadena introducida.
 			\label{fig:sin_procesos}
 		\end{figure}
 		\newpage
-	\item[\fbox{Editor de Texto}] Se elige SublimeText (TM), por ser uno de los editores de texto más utilizados en ordenadores con relativos bajos resursos (consulte \micita{editors}). Los procesadores prsentaron el comportamiento de la Figura \ref{fig:subl} (nuevamente, las capturas de pantalla de todos los procesos se encuentra en).
+	\item[\fbox{Editor de Texto}] Se elige SublimeText (TM), por ser uno de los editores de texto más utilizados en ordenadores con relativos bajos recursos (consulte \micita{editors}). Los procesadores presentaron el siguiente comportamiento.
 		\begin{figure}[hbt!]
 			\centering
 			\includegraphics[width= 0.8 \linewidth]{IMAGENES/6/4_sublime_text}
 			\caption{Procesadores trabajando con Sublime Text.}
 			\label{fig:subl}
 		\end{figure}
-	\item[\fbox{Página Web}] El ordenador de ejecución tenía las siguientes características en la ejecución de Firefox con la página de internet \texttt{https://www.office.com/} abierta.
+	\item[\fbox{Página Web}] El ordenador de ejecución tenía las siguientes características en la ejecución de Firefox con la página de Internet \texttt{https://www.office.com/} abierta.
 		\begin{figure}[hbt!]
 			\centering
 			\includegraphics[width= 0.8 \linewidth]{IMAGENES/6/6_firefox_web}
@@ -540,14 +533,13 @@ Vease el código fuente en [] para la revisión de la cadena introducida.
 % )))
 
 % )))
+\newpage
 
 \section{METODOLOGÍA DEL EXPERIMENTO.} % (((
-Como lo indica la Figura \ref{fig:caract}, el ordenador estuvo \(44min\) encendido al realizar la primer prueba de la Tabla \ref{tab:experimento_completo}.
+Como indica la Figura \ref{fig:caract}, el ordenador estuvo \(44min\) encendido al realizar la primer prueba de la Tabla \ref{tab:experimento_completo}.
 Se realiza cada uno de los registros de tiempos de ejecución de forma aleatoria. \\[2mm]
-
-Para minimizar el nivel de impresición del tiempo registrado computacionalmente, se realizan \(6\) repeticiones para cada una de las \(16\) mediciones, y se considerará como valor real su promedio aritmético.
-Los datos completos pueden consultarse en % link.
-% TODO: REFERENCIAR REPO.
+Para minimizar el nivel de imprecisión del tiempo registrado computacionalmente, se realizan \(6\) repeticiones para cada una de las \(16\) mediciones, y se considerará como valor real su promedio aritmético.
+Los datos completos pueden consultarse en \micita{repo}, en las carpetas \codigo{PROGRAMAS/*/EJECUCION\textunderscore DE\textunderscore PROGRAMAS/}.
 A continuación se escriben los comandos utilizados en cada programa. \\[2mm]
 \begin{minipage}{0.5\linewidth}
 	\subsection{--- C ---} % (((
@@ -597,9 +589,8 @@ time ruby archivo.rb
 
 \section{RESULTADOS.} % (((
 \label{sec:resultados}
-Se registra en la Tabla , los valores registrados con los promedios aritméticos de \(6\) tiempos de ejecución de cada programa en las condiciones de cada bloque.
-La base de datos completa puede consultarse en 
-% TODO. REFERENCIA REPOSITORIO GITHUB.
+Se registra en la Tabla \ref{tab:resultados}, los valores registrados con los promedios aritméticos de \(6\) tiempos de ejecución de cada programa en las condiciones de cada bloque.
+La base de datos completa puede consultarse en \micita{repo}, dentro del archivo \codigo{ANALISIS\textunderscore ESTADISTICO/2\textunderscore DCL/dcl\textunderscore 2.txt}.
 \begin{table}[hbt!]
 	\centering
 	\footnotesize 
@@ -619,6 +610,7 @@ La base de datos completa puede consultarse en
 \section{ANÁLISIS ESTADÍSTICO.} % (((
 
 Los resultados se evaluarán a un nivel de confianza del \(1- \alpha = 95\)\textsc{\%}, es decir, se toma \(\alpha = 0.05\).
+El análisis completo puede consultarse en \micita{repo} en la carpeta \codigo{ANALISIS\textunderscore ESTADISTICO/*}.
 
 \subsection{--- Diagrama de Cajas Simultáneas ---} % (((
 \label{sub:cajas}
@@ -642,7 +634,7 @@ Los resultados se evaluarán a un nivel de confianza del \(1- \alpha = 95\)\text
 	\begin{tabular}{|*{4}{l|}}
 		\hline 
 		Supuesto & Test & Valor--\(p\) & Conclusión \\ \hline
-		Normalidad & Shapiro--Wilk & \(0.3323\) & Se cumple el supuesto de realidad \\ \hline
+		Normalidad & Shapiro--Wilk & \(0.3323\) & Se cumple el supuesto de normalidad \\ \hline
 		Homocedasticidad & Levene & \(0.4367\) & Se cumple el supuesto de homocedasticidad \\ \hline
 		Independencia & Durbin--Watson & \(0.6498\) & Se cumple el supuesto de independencia \\ \hline
 	\end{tabular}
@@ -654,7 +646,7 @@ Los resultados se evaluarán a un nivel de confianza del \(1- \alpha = 95\)\text
 
 \subsection{--- ANOVA ---} % (((
 \label{sub:anova}
-Dada la verificación de los supuestos, se realiza la Tabla Anova (código y resultados en).
+Dada la verificación de los supuestos, se realiza la Tabla ANOVA.
 \begin{table}[hbt!]
 	\footnotesize
 	\centering
@@ -668,26 +660,26 @@ Dada la verificación de los supuestos, se realiza la Tabla Anova (código y res
 		Total                              &12 & 4.36852 &          &        & \\ \hline
 	\end{tabular}
 	\label{tab:anova}
-\end{table}
-Se observa que la columna \texttt{[Valor-p]} contiene los percentiles de las pruebas de hipótesis (1), (2) y (3), respectivamente. Las cuales adaptadas al modelo estadístico son las siguientes.
+\end{table}\\
+Se observa que la columna \texttt{[Valor-p]} contiene los percentiles de las pruebas de hipótesis (2), (3) y (4), respectivamente. Las cuales adaptadas al modelo estadístico son las siguientes.
 \begin{enumerate}
-	\item[\fbox{Hip. Principal}] Se re-escribe (1).
+	\item[\fbox{Hip. Principal}] Se re-escribe (2).
 		\[
 			\begin{array}{rl}
 				H_0 \;:\; & \mbox{Todos los lenguajes de programación estudiados tienen el mismo tiempo de ejecución promedio.} \\
 				H_a \;:\; & \mbox{Hay al menos un lenguaje analizado que tiene un tiempo promedio de ejecución diferente.}
 			\end{array}
 		\]
-	\item[\fbox{Hip. Secundaria 1}] Se re-escribe (2).
+	\item[\fbox{Hip. Secundaria 1}] Se re-escribe (3).
 		\[
 			\begin{array}{rl}
 				H_0 \;:\; & \mbox{El tiempo de ejecución promedio no es afectado por el algoritmo programado.} \\
 				H_a \;:\; & \mbox{Hay al menos un algoritmo que produce un tiempo de ejecución promedio diferente.}
 			\end{array}
 		\]
-		Se tiene que \textit{valor-p\(= 07025 > \alpha\)}, entonces no se rechaza \(H_0\) (es decir, el tiempo de ejecución promedio no es afectado por la complejidad algoritmica del programa).
+		Se tiene que \textit{valor--p\(= 0.5843 > \alpha\)}, entonces no se rechaza \(H_0\) (es decir, el tiempo de ejecución promedio no es afectado por la complejidad algorítmica del programa).
 		Se remueve ésta fuente de variabilidad y se realiza nuevamente el análisis en la sección \ref{sub:dbca}.
-	\item[\fbox{Hip. Secundaria 2}] Se re-escribe (3).
+	\item[\fbox{Hip. Secundaria 2}] Se re-escribe (4).
 		\[
 			\begin{array}{rl}
 				H_0 \;:\; & \mbox{El tiempo de ejecución promedio no es afectado por la cantidad de procesos en segundo plano.} \\
@@ -699,7 +691,7 @@ Se observa que la columna \texttt{[Valor-p]} contiene los percentiles de las pru
 
 \subsection{--- Reducción de Modelo a un DBCA ---} % (((
 \label{sub:dbca}
-Se redujo el modelo a la siguiente formulación de la ecuación (\ref{eq:modelo}) \(Y_{jh} = \mu + \tau _{h_{j}} + \delta _j + \varepsilon _{ij(h_{ij})}\), que es un DBCA. Y por tanto, se construye de nuevo la Tabla ANOVA.
+Se redujo el modelo a la siguiente formulación de la ecuación (\ref{eq:modelo}) \(Y_{ijh} = \mu + \tau _{h_{j}} + \delta _j + \varepsilon _{ij(h_{ij})}\), que es un DBCA. Y por tanto, se construye de nuevo la Tabla ANOVA.
 \begin{table}[hbt!]
 	\centering
 	\footnotesize
@@ -751,7 +743,7 @@ Se construye la tabla ANOVA.
 \end{table}
 Finalmente, se contesta la Hipótesis Principal.
 \begin{enumerate}
-	\item[\fbox{Hip. Principal}] \color{white} c \color{black}
+	\item[\fbox{Hip. Principal}] \color{white} c \color{black} \vspace{-5mm}
 		\[
 			\begin{array}{rl}
 				H_0 \;:\; & \mbox{Todos los lenguajes de programación estudiados tienen el mismo tiempo de ejecución promedio.} \\
@@ -760,28 +752,16 @@ Finalmente, se contesta la Hipótesis Principal.
 		\]
 		Y en este caso tenemos que \(valor-p = 0.03 < \alpha\), por lo que se rechaza \(H_0\).
 		Así, existe un lenguaje de programación que tiene un tiempo de ejecución promedio diferente al resto.
-		Se observará cuál es diferente en la sección .
+		Se observará cuál es diferente en la sección \ref{sub:trata_diferentes}.
 \end{enumerate}
 % )))
 
 \subsection{--- Tratamientos Diferentes ---} % (((
 \label{sub:trata_diferentes}
-Se ejecuta LSD (véase el repositorio), y se observa lo siguiente.
-% TODO: AÑADIR EL REPOSITORIO.
-       % Respuesta         std r         LCL       UCL         Min        Max
-% C      0.0106250 0.006808728 4 -0.60199990 0.6232499 0.004166667 0.01783333
-% Python 0.5702084 0.461407795 4 -0.04241655 1.1828333 0.072000000 1.16950000
-% R      0.9957082 0.712618224 4  0.38308335 1.6083332 0.624333300 2.06433300
-% Ruby   0.2456250 0.078399676 4 -0.36699993 0.8582499 0.182833300 0.35000000
-% 
-% Alpha: 0.05 ; DF Error: 6
-% Critical Value of t: 2.446912 
-% 
-% least Significant Difference: 0.8663824 
-% 
-% Treatments with the same letter are not significantly different.
-% 
+Se realiza el test de Fisher Least Significant Difference (LSD), y se observa lo siguiente, (véase \micita{repo}).
 \begin{lstlisting}[language = R]
+least Significant Difference: 0.8663824 
+Treatments with the same letter are not significantly different.
        Respuesta groups
 R      0.9957082      a
 Python 0.5702084     ab
@@ -793,21 +773,25 @@ C      0.0106250      b
 % )))
 
 \section{CONCLUSIONES.} % (((
-% (ojalá) que C sea más rapido que todos.
-% matlab es el más lento de todos.
-% a pesar de que octave fue más lento en el cálculo de pi, al colocar el formato \texttt{[format long]} pudo establecer con una precisión de 10 digitos correctos de pi. (consúltese el repositorio).
-% CONCLUSIÓN ESTADÍSTICA DEL EXPERIMENTO.
+\begin{enumerate}
+	\item Los algoritmos elegidos no influyeron de forma significativa en los tiempos promedio de ejecución.
+	\item Los distintos procesos en segundo plano en el ordenador no influyeron de forma significativa en los tiempos promedio de ejecución.
+	\item \codigo{R}, \codigo{Python} y \codigo{Ruby} no son significativamente diferentes en su tiempo promedio de ejecución.
+	\item \codigo{C}, \codigo{Python} y \codigo{Ruby} no son significativamente diferentes en su tiempo promedio de ejecución.
+	\item \codigo{C} y \codigo{R} son significativamente diferentes en su tiempo de ejecución promedio. \\[2mm]
+	Observamos que en el código fuente de \codigo{R}, (de la página \micita{fuente_r}), \codigo{R} mayormente está escrito en \codigo{C}. Indicando que, el proceso de traducción de instrucciones a \codigo{C} puede volver significativamente más lento los procesos de ejecución, que directamente, podrían realizarse en nativamente \codigo{C}.
+\end{enumerate}
 % )))
 
 \section{FUTURA INVESTIGACIÓN.} % (((
-un diseño que permita considerar todos los lenguajes en las mismas condiciones (la misma configuración de bloques), esto es, aplicar un DCA en cada una de las posibles configuraciones de los 2 Bloques.
-% incluir programas y procesos algoritmicos que requieran aleatorización 
-% i.e. la construcción de números pseudoaleatorios por parte del lenguaje.
+\begin{enumerate}
+	\item Se alienta a la implementación futura de un diseño experimental que permita realizar la comparación entre algoritmos programados, y que se pueda realizar la ejecución de algoritmos a distintos ``inputs'', sin que se pierda la interpretación de que las ejecuciones provienen del mismo algoritmo. 
+		Es decir, que sea posible diseñar varios niveles, dentro de los mismos niveles de factor.
+		Note que en la sección \ref{sub:algoritmos} se establecieron las ejecuciones para un parámetro fijo.
+		En el caso de \texttt{Fibonacci}, \(n=46\). En el de \texttt{MCD}, se tiene \(n,m = 6983776800,5587021440\). En el \texttt{Cálculo de Pi}, se tiene \(n = 100,000\). Y en el \texttt{Ordenamiento Burbuja} se escogió aleatoriamente un ``array'' con los primeros \(1,000\) números naturales desordenados.
+	\item Incluir un experimento con algoritmos que requieran bibliotecas de aleatorización (\textit{i.e.} medir el tiempo promedio de ejecución de creación de números pseudo-aleatorios en cada lenguaje).
+\end{enumerate}
 % )))
-
-% TODO: CREAR REPOSITORIO EN GITHUB. incluir licencia GPLv3
-
-\newpage
 
 % === REFERENCIAS === (((
 \bibliography{Referencias}
