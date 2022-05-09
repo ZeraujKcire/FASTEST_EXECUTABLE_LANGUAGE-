@@ -1,0 +1,78 @@
+\begin{thebibliography}{10}
+
+\bibitem{lenguajes_importantes}
+Brian Eastwood.
+\newblock The 10 most popular programming languages, 2020.
+\newblock
+  \url{https://www.northeastern.edu/graduate/blog/most-popular-programming-languages/}.
+
+\bibitem{popularidad}
+Taylor Karl.
+\newblock 7 programming languages for beginner developers, 2021.
+\newblock
+  \url{https://unitedtraining.com/resources/blog/7-programming-languages-for-beginner-developers}.
+
+\bibitem{comparacion_lenguajes}
+Pereira, Couto, Ribeiro, Rua, Cunha, Fernandes, and Saraiva.
+\newblock Ranking programming languages by energy efficiency.
+\newblock {\em Elsevier}, 2021.
+
+\bibitem{github_rosseta}
+Marco Couto and Rui Pereira.
+\newblock Rosseta examples, 30 Nov 2020.
+\newblock \url{https://github.com/greensoftwarelab/RosettaExamples}.
+
+\bibitem{gutierrez}
+De~la Vara Salazar~Román Gutiérrez Pulido~Humberto.
+\newblock {\em Análisis y diseño de experimentos}.
+\newblock McGraw Hill, 2a edition, 2008.
+\newblock Págs. 7-9.
+
+\bibitem{cox}
+Nancy~Reid D.R.~Cox.
+\newblock {\em The Theory of the Design of Experiments}.
+\newblock Monographs on statistics and applied probability 86. Chapman \&
+  Hall/CRC, 1 edition, 2000.
+\newblock Capítulo 4.1.
+
+\bibitem{pag_web}
+BH~Photo~Video Audio.
+\newblock Dell inspiron 11 3000 11 - 3147 11.6" multi-touch convertible laptop
+  computer, 2022.
+\newblock
+  \url{https://www.bhphotovideo.com/c/product/1123115-REG/dell_11_3147_inspiron_11_n3530_4gb_500gb_windows_8_1_11_6_silver.html}.
+
+\bibitem{dell}
+Dell Technologies.
+\newblock Soporte para inspiron 3147, 2015.
+\newblock
+  \url{https://dl.dell.com/manuals/all-products/esuprt_laptop/esuprt_inspiron_laptop/inspiron-11-3147-laptop_reference%20guide_es-mx.pdf}.
+
+\bibitem{manpage_time}
+David MacKenzie.
+\newblock Manual page time command.
+\newblock \url{https://www.commandlinux.com/man-page/man1/time.1.html}.
+
+\bibitem{explicacion_time}
+GCeasy Team.
+\newblock User, sys, and real, which time to use?, 2016.
+\newblock
+  \url{https://blog.gceasy.io/2016/04/06/gc-logging-user-sys-real-which-time-to-use/}.
+
+\bibitem{wiki_modos}
+Wikipedia.
+\newblock Modos de operación de la unidad central de procesamiento, 2021.
+\newblock
+  \url{https://es.wikipedia.org/wiki/Modos_de_operaci%C3%B3n_de_la_unidad_central_de_procesamiento}.
+
+\bibitem{rosseta_rls}
+Rosseta Code.
+\newblock Random latin squares, 2022.
+\newblock \url{https://rosettacode.org/wiki/Random_Latin_squares#C}.
+
+\bibitem{editors}
+Brian Jackson.
+\newblock 13 best text editors to speed up your workflow, 2022.
+\newblock \url{https://kinsta.com/blog/best-text-editors/}.
+
+\end{thebibliography}

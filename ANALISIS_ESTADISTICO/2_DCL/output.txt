@@ -1,0 +1,194 @@
+[1] " --- DATOS --- "
+'data.frame':	16 obs. of  4 variables:
+ $ Tipo_Test     : chr  "FIBONACCI" "FIBONACCI" "FIBONACCI" "FIBONACCI" ...
+ $ Procesos_fondo: chr  "P1" "P2" "P3" "P4" ...
+ $ Lenguaje      : chr  "Ruby" "Python" "R" "C" ...
+ $ Tiempo        : num  0.18783 0.072 0.631 0.00417 0.62433 ...
+[1] " --- SUPUESTOS --- "
+[1] " --- 1. NORMALIDAD --- "
+[1] "RESULTADOS CON TODAS LAS FUENTES DE VARIABILDAD."
+Call:
+   aov(formula = Respuesta ~ F.Control + Bloque1 + Bloque2, data = datos)
+
+Terms:
+                F.Control   Bloque1   Bloque2 Residuals
+Sum of Squares  2.1877770 0.5284091 0.1479332 1.5044019
+Deg. of Freedom         3         3         3         6
+
+Residual standard error: 0.5007331
+Estimated effects may be unbalanced
+[1] "Shapiro Test."
+
+	Shapiro-Wilk normality test
+
+data:  residuos
+W = 0.9386, p-value = 0.3323
+
+[1] "KS Test"
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  residuos
+D = 0.21608, p-value = 0.388
+alternative hypothesis: two-sided
+
+[1] " --- 2. HOMOCEDASTICIDAD --- "
+Levene's Test for Homogeneity of Variance (center = median)
+      Df F value Pr(>F)
+group  3  0.9748 0.4367
+      12               
+
+	Bartlett test of homogeneity of variances
+
+data:  Respuesta by F.Control
+Bartlett's K-squared = 27.592, df = 3, p-value = 4.424e-06
+
+[1] " --- 3. INDEPENDENCIA --- "
+
+	Durbin-Watson test
+
+data:  regresion
+DW = 2.4922, p-value = 0.6498
+alternative hypothesis: true autocorrelation is greater than 0
+
+[1] " --- ANOVA --- "
+Analysis of Variance Table
+
+Response: Respuesta
+          Df  Sum Sq Mean Sq F value Pr(>F)
+F.Control  3 2.18778 0.72926  2.9085 0.1231
+Bloque1    3 0.52841 0.17614  0.7025 0.5843
+Bloque2    3 0.14793 0.04931  0.1967 0.8950
+Residuals  6 1.50440 0.25073               
+[1] " --- DBCA --- "
+
+	Shapiro-Wilk normality test
+
+data:  residuos
+W = 0.92705, p-value = 0.2188
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  residuos
+D = 0.12893, p-value = 0.9223
+alternative hypothesis: two-sided
+
+
+	Durbin-Watson test
+
+data:  regresion_1
+DW = 1.9147, p-value = 0.4972
+alternative hypothesis: true autocorrelation is greater than 0
+
+[1] "RESULTADOS SOLO CON LA FUENTE DE VARIABILIDAD DEL FACTOR CONTROLABLE."
+Call:
+   aov(formula = Respuesta ~ F.Control + Bloque2, data = datos)
+
+Terms:
+                F.Control   Bloque2 Residuals
+Sum of Squares  2.1877770 0.1479332 2.0328110
+Deg. of Freedom         3         3         9
+
+Residual standard error: 0.4752556
+Estimated effects may be unbalanced
+Analysis of Variance Table
+
+Response: Respuesta
+          Df  Sum Sq Mean Sq F value  Pr(>F)  
+F.Control  3 2.18778 0.72926  3.2287 0.07508 .
+Bloque2    3 0.14793 0.04931  0.2183 0.88126  
+Residuals  9 2.03281 0.22587                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] " --- DCA --- "
+
+	Shapiro-Wilk normality test
+
+data:  residuos
+W = 0.82806, p-value = 0.006586
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  residuos
+D = 0.32636, p-value = 0.0511
+alternative hypothesis: two-sided
+
+
+	Durbin-Watson test
+
+data:  regresion_1
+DW = 1.9147, p-value = 0.4972
+alternative hypothesis: true autocorrelation is greater than 0
+
+[1] "RESULTADOS SOLO CON LA FUENTE DE VARIABILIDAD DEL FACTOR CONTROLABLE."
+Call:
+   aov(formula = Respuesta ~ F.Control, data = datos)
+
+Terms:
+                F.Control Residuals
+Sum of Squares   2.187777  2.180744
+Deg. of Freedom         3        12
+
+Residual standard error: 0.4262965
+Estimated effects may be unbalanced
+Analysis of Variance Table
+
+Response: Respuesta
+          Df Sum Sq Mean Sq F value  Pr(>F)  
+F.Control  3 2.1878 0.72926  4.0129 0.03428 *
+Residuals 12 2.1807 0.18173                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] " --- COMPARACIONES --- "
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = Respuesta ~ F.Control, data = datos)
+
+$F.Control
+                  diff         lwr       upr     p adj
+Python-C     0.5595834 -0.33535369 1.4545204 0.2959979
+R-C          0.9850833  0.09014621 1.8800203 0.0297229
+Ruby-C       0.2350000 -0.65993706 1.1299370 0.8622162
+R-Python     0.4254999 -0.46943714 1.3204369 0.5160955
+Ruby-Python -0.3245834 -1.21952041 0.5703537 0.7094703
+Ruby-R      -0.7500833 -1.64502031 0.1448538 0.1125792
+
+
+<<<<<<< HEAD
+Call:
+lm(formula = Respuesta ~ F.Control, data = datos)
+
+Coefficients:
+    (Intercept)  F.ControlPython       F.ControlR    F.ControlRuby  
+        0.01062          0.55958          0.98508          0.23500  
+
+=======
+Study: resultados ~ "F.Control"
+
+LSD t Test for Respuesta 
+
+Mean Square Error:  0.2507337 
+
+F.Control,  means and individual ( 95 %) CI
+
+       Respuesta         std r         LCL       UCL         Min        Max
+C      0.0106250 0.006808728 4 -0.60199990 0.6232499 0.004166667 0.01783333
+Python 0.5702084 0.461407795 4 -0.04241655 1.1828333 0.072000000 1.16950000
+R      0.9957082 0.712618224 4  0.38308335 1.6083332 0.624333300 2.06433300
+Ruby   0.2456250 0.078399676 4 -0.36699993 0.8582499 0.182833300 0.35000000
+
+Alpha: 0.05 ; DF Error: 6
+Critical Value of t: 2.446912 
+
+least Significant Difference: 0.8663824 
+
+Treatments with the same letter are not significantly different.
+
+       Respuesta groups
+R      0.9957082      a
+Python 0.5702084     ab
+Ruby   0.2456250     ab
+C      0.0106250      b

@@ -1,0 +1,160 @@
+
+# === C (ejecutable) === (((
+
+real	0m0.008s
+user	0m0.000s
+sys	0m0.008s
+
+real	0m0.007s
+user	0m0.005s
+sys	0m0.003s
+
+real	0m0.007s
+user	0m0.000s
+sys	0m0.007s
+
+real	0m0.007s
+user	0m0.000s
+sys	0m0.008s
+
+real	0m0.007s
+user	0m0.002s
+sys	0m0.006s
+
+real	0m0.007s
+user	0m0.002s
+sys	0m0.006s
+
+# )))
+
+real 0.007166667
+user 0.0015
+sys	 0.006333333
+
+# === PYTHON === (((
+
+real	0m0.072s
+user	0m0.054s
+sys	0m0.017s
+
+real	0m0.074s
+user	0m0.053s
+sys	0m0.021s
+
+real	0m0.075s
+user	0m0.046s
+sys	0m0.029s
+
+real	0m0.071s
+user	0m0.049s
+sys	0m0.022s
+
+real	0m0.073s
+user	0m0.057s
+sys	0m0.016s
+
+real	0m0.072s
+user	0m0.044s
+sys	0m0.028s
+
+# )))
+
+real 0.07283333
+user 0.0505
+sys	 0.02216667
+
+# === R === (((
+
+real	0m0.624s
+user	0m0.849s
+sys	0m0.153s
+
+real	0m0.624s
+user	0m0.819s
+sys	0m0.180s
+
+real	0m0.628s
+user	0m0.797s
+sys	0m0.204s
+
+real	0m0.625s
+user	0m0.792s
+sys	0m0.209s
+
+real	0m0.636s
+user	0m0.833s
+sys	0m0.179s
+
+real	0m0.632s
+user	0m0.791s
+sys	0m0.214s
+
+# )))
+
+real 0.6281667
+user 0.8135
+sys	 0.1898333
+
+# === RUBY === (((
+
+real	0m0.181s
+user	0m0.142s
+sys	0m0.039s
+
+real	0m0.186s
+user	0m0.160s
+sys	0m0.026s
+
+real	0m0.183s
+user	0m0.146s
+sys	0m0.037s
+
+real	0m0.181s
+user	0m0.158s
+sys	0m0.023s
+
+real	0m0.184s
+user	0m0.154s
+sys	0m0.030s
+
+real	0m0.182s
+user	0m0.159s
+sys	0m0.022s
+
+# )))
+
+real 0.1828333
+user 0.1531667
+sys	 0.0295
+
+# === OCTAVE === (((
+
+real	0m0.625s
+user	0m0.815s
+sys	0m0.145s
+
+real	0m0.584s
+user	0m0.783s
+sys	0m0.170s
+
+real	0m0.713s
+user	0m0.583s
+sys	0m0.180s
+
+real	0m0.603s
+user	0m0.696s
+sys	0m0.160s
+
+real	0m0.566s
+user	0m0.694s
+sys	0m0.126s
+
+real	0m0.593s
+user	0m0.789s
+sys	0m0.160s
+
+# )))
+
+real 0.614
+user 0.7266667
+sys	 0.1568333
