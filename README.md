@@ -1,13 +1,10 @@
 # Comparación de la Velocidad de Ejecución de Lenguajes de Programación.
 
----
-
 
 
 
 
 ## Descripción.
----
 
 El presente trabajo realiza un análisis estadístico comparativo de los tiempos de ejecución de los lenguajes `C`, `Python`, `R` y `Ruby`. Sometidos a los mismos algoritmos y las mismas condiciones en un ordenador con `Ubuntu 20.04`.
 Lea el documento en [DOCUMENTO/Lenguaje_Rapido.pdf](https://github.com/ZeraujKcire/FASTEST_EXECUTABLE_LANGUAGE-/blob/master/DOCUMENTO/Lenguage_Rapido.pdf), para poder observar el análisis realizado.
@@ -17,7 +14,6 @@ Lea el documento en [DOCUMENTO/Lenguaje_Rapido.pdf](https://github.com/ZeraujKci
 
 
 ## Requisitos.
----
 
 Para replicar el experimento presentado se necesita de:
 1. Un compilador en `c`.
@@ -30,7 +26,6 @@ Para replicar el experimento presentado se necesita de:
 
 
 ## Análisis.
----
 
 Vea los archivos de `R` en [ANALISIS_ESTADISTICO/2_DCL/](https://github.com/ZeraujKcire/FASTEST_EXECUTABLE_LANGUAGE-/tree/master/ANALISIS_ESTADISTICO/2_DCL) para poder realizar el mismo análisis estadístico que el documento indica.
 
@@ -38,7 +33,6 @@ Vea los archivos de `R` en [ANALISIS_ESTADISTICO/2_DCL/](https://github.com/Zera
 
 
 ## Ejemplo.
----
 
 Si desea realizar el mismo experimento en su ordenador, debe realizar los siguientes pasos.
 1. Defina los lenguajes a comparar.
