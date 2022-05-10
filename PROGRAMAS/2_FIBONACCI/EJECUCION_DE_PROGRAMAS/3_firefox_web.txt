@@ -134,37 +134,3 @@ sys	0m0.049s
 real 0.1941667
 user 0.152
 sys	 0.03666667
-
-# === OCTAVE === (((
-
-real	0m0.641s
-user	0m0.751s
-sys	0m0.199s
-
-real	0m0.582s
-user	0m0.658s
-sys	0m0.153s
-
-real	0m0.624s
-user	0m0.689s
-sys	0m0.186s
-
-real	0m0.615s
-user	0m0.646s
-sys	0m0.170s
-
-real	0m0.616s
-user	0m0.773s
-sys	0m0.163s
-
-real	0m0.625s
-user	0m0.652s
-sys	0m0.173s
-
-# )))
-
--- PROMEDIO --
-
-real 0.6171667
-user 0.6948333
-sys	 0.174
